@@ -1,56 +1,53 @@
 # ZOE or Zombie Out Break Emulator
 
 Project Summary
+ZOE simulates the spread of zombies across a world filled with non-player controlled elements (NPC) that are composed of humans and zombies. Humans will navigate the world trying to survive for as many days as possible while hunting for supply depots that restores their health, prevent them from starving to death and increase their attacking power against zombies. Zombies navigate the world hunting for humans to eat and turn them into other zombies. 
 
-ZOE simulates the spread of zombies across a world filled with nonplayer controlled elements (NPC). 
+How the simulation is set up?
+Users do not have the ability to control the action of each NPC. Users can only set the type, number, and location of each element. Then the world will randomly generate these elements and they will behave by themselves. 
 
-----------------------------------------------------------------------------------------------------------------------------------------
+What are the different types of NPCs and their attributes in the simulation? 
+Humans
+Attack Power: Chance of surviving a fight
+Health: Hit points for survival
+Hunger: Count down timer until the health begins to decrease automatically
+Sensor: Detection of other NPCs
+Speed: how quickly a human moves throughout the world 
+Morality: Chance of fighting another human
 
-What can a user do? 
-Users do not have the ability to control any individual NPC elements. The user will only determine the type and number of each elements prior to the beginning of each simulation. Once the simulation begins, the user can take no further actions.
+Zombies
+Attack Power: Chance of surviving a fight
+Health: Hit points for survival
+Hunger: Count down timer until the health begins to decrease automatically
+Sensor: Detection of other NPCs
+Speed: how quickly a zombie moves 
+Rage: How long will a zombie chase a human that it encounters?
 
-----------------------------------------------------------------------------------------------------------------------------------------
+Supply depot
+Randomly restores or adds point to attack power, health, hunger, for human NPCs.
 
 What happens during a simulation?
-each NPC will randomly move throughout the world and encounter another NPC. With each encounter, several possibilities may occur:
+Each NPC will randomly move throughout the world and encounter other NPCs. With each encounter, several possibilities may occur:
 
-If an uninfected meets another uninfected
-1) nothing happens
-2) One uninfected fights another
- a) gain/lose health
- b) gain/lose morality point
- c) gain/lose attack power
- d) death/no death
-3) forms a "group" and then group travels together
+If a human meets another human
+1.	Nothing happens
+2.	They fight
+a.	One will gain/lose points in their attributes and they escape from each other
+b.	One or both will die
 
-if an uninfected meets an infected
-1) infected dies 
- a) lose health/attack power for uninfected
-2) uninfected dies and a new infected is created
- a) stats for new infected is reset to 0
+If a zombie meets another zombie
+1.	Nothing happens
 
-If an uninfected meets a supply depot
- 1) health is restored to full
- 
-Simulation ends when there is no uninfected OR infected NPCs. 
+If a human meets a zombie
+1.	Zombie dies and human gain/lose points in attribute
+2.	Human runs away
+3.	Human dies and becomes a new zombie
 
-----------------------------------------------------------------------------------------------------------------------------------------
-NPC ELEMENTS
+If a human meets a supply depot
+1.	Random point increase in attribute points
 
-Elements include uninfected and infected persons. Each element will have certain attributes that determines the probability of surviving an encounter with another element. 
-Uninfected Attributes
+How does a simulation end? 
+Simulation ends when there are no more zombies or no more humans!
 
-Attack Power:  
-Health: 
- 
-
-Infected Attributes
--------------------------
-Attack Power:
-Health
-Rage
-
-Future Capabilities:
-Teamwork: chance for uninfected to band together 
-Morality: chance for uninfected to turn on and betray another uninfected
+How does a
 
